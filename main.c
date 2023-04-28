@@ -2,8 +2,8 @@
 
 /**
  * *main - The main part
- * *hemo_read_line - a function that reads the line
- * *hemo_exec_line - a function that execute the line
+ * **hemo_read_line - a function that reads the line
+ * **hemo_exec_line - a function that execute the line
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
