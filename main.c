@@ -2,46 +2,9 @@
 
 /**
  * *main - The main part
- * **hemo_read_line - a function that reads the line
- * **hemo_exec_line - a function that execute the line
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
-
-char *hemo_read_line(void)
-{
-	char *line = NULL;
-	size_t n = 0;
-
-	if (getline(&line, &n, stdin) == -1)
-	{
-		exit(-1);
-	}
-	strtok(line, " \t\n\r");
-	return (line);
-}
-
-void hemo_exec_line(char *line)
-{
-	pid_t child;
-	int status;
-	char *myargs[] = {NULL};
-	char *myenv[] = {NULL};
-
-	child = fork();
-	if (child == 0)
-	{
-		if (execve(line, myargs, myenv))
-		{
-			perror("hsh");
-			exit(EXIT_FAILURE);
-		}
-	}
-	if (child > 0)
-	{
-		wait(&status);
-	}
-}
 
 int main(void)
 {
