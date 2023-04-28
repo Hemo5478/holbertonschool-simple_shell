@@ -2,11 +2,13 @@
 
 /**
  * *main - The main part
+ * *@argc : a counter
+ * *@argv : an array of arguments
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-int main(void)
+int main( __attribute__((unused)) int argc, char *argv[])
 {
 	char *line;
 
@@ -14,7 +16,7 @@ int main(void)
 	{
 		printf("($)");
 		line = hemo_read_line();
-		hemo_exec_line(line);
+		hemo_exec_line(line, argv);
 	}
 	free(line);
 }
