@@ -3,21 +3,21 @@
 /**
  * *hemo_exec_line - a function that execute the line
  * @line : a string
+ * @argv : array of arguments
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-void hemo_exec_line(char *line)
+void hemo_exec_line(char *line, char *argv[])
 {
 	pid_t child;
 	int status;
-	char *myargs[] = {NULL};
 	char *myenv[] = {NULL};
 
 	child = fork();
 	if (child == 0)
 	{
-		if (execve(line, myargs, myenv))
+		if (execve(line, argv, myenv))
 		{
 			perror("hsh");
 			exit(EXIT_FAILURE);
