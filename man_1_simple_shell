@@ -1,0 +1,28 @@
+.TH man 1 "27 April 2023" GNU "HSH man page"
+.SH NAME
+.B hsh
+- Command line interpreter (shell)
+.SH SYNOPSIS
+The shell is executed by typing ./hsh
+.br
+[command] [options]
+.SH DESCRIPTION
+.B hsh
+is a shell command interpreter that executes command and read from a typed input .
+.br
+- Executes any command with its argument
+
+.SH OPTIONS
+.B hsh
+operates in both 
+.I interactive 
+and 
+.I non-interactive mode.
+
+.SH BUGS
+No known bugs. 
+Please report 
+.B hsh 
+bugs to (https://github.com/Hemo5478/holbertonschool-simple_shell/issues).
+.SH AUTHOR
+Hamza Ajili (https://github.com/Hemo5478)
