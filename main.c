@@ -8,19 +8,19 @@
  * On error, -1 is returned, and errno is set appropriately.
  */
 
-char* hemo_read_line()
+char *hemo_read_line(void)
 {
-	char* line = NULL;
+	char *line = NULL;
 	size_t n = 0;
-	if (getline (&line, &n, stdin) == -1)
+	if (getline(&line, &n, stdin) == -1)
 	{
-		exit (-1);
+		exit(-1);
 	}
-	strtok (line, " \t\n\r");
-	return (line);
+	strtok(line, " \t\n\r");
+	return(line);
 }
 
-void hemo_exec_line(char* line)
+void hemo_exec_line(char *line)
 {
 	pid_t child;
 	int status;
@@ -41,14 +41,14 @@ void hemo_exec_line(char* line)
 	}
 }
 
-int main()
+int main(void)
 {
-	char* line;
-	while (1)
+	char *line;
+	while(1)
 	{
 		printf("($)");
 		line = hemo_read_line();
 		hemo_exec_line(line);
 	}
-	free (line);
+	free(line);
 }
