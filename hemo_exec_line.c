@@ -26,4 +26,4 @@ void hemo_exec_line(char *line)
 	{
 		wait(&status);
 	}
-.}
+}
