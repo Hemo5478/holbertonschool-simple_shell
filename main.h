@@ -9,6 +9,6 @@
 #include <sys/wait.h>
 
 char *hemo_read_line(void);
-void hemo_exec_line(char *line);
+void hemo_exec_line(char *line, char *argv[]);
 
 #endif
