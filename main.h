@@ -8,4 +8,7 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+char *hemo_read_line(void);
+void hemo_exec_line(char *line);
+
 #endif
