@@ -12,12 +12,13 @@ char *hemo_read_line(void)
 {
 	char *line = NULL;
 	size_t n = 0;
+
 	if (getline(&line, &n, stdin) == -1)
 	{
 		exit(-1);
 	}
 	strtok(line, " \t\n\r");
-	return(line);
+	return (line);
 }
 
 void hemo_exec_line(char *line)
@@ -26,6 +27,7 @@ void hemo_exec_line(char *line)
 	int status;
 	char *myargs[] = {NULL};
 	char *myenv[] = {NULL};
+
 	child = fork();
 	if (child == 0)
 	{
@@ -44,7 +46,8 @@ void hemo_exec_line(char *line)
 int main(void)
 {
 	char *line;
-	while(1)
+
+	while (1)
 	{
 		printf("($)");
 		line = hemo_read_line();
