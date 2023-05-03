@@ -17,6 +17,7 @@ int main( __attribute__((unused)) int argc, char *argv[])
 		printf("($)");
 		line = hemo_read_line();
 		hemo_exec_line(line, argv);
+		free(line);
 	}
-	free(line);
+	return (0);
 }
