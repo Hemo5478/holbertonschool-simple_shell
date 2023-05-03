@@ -2,7 +2,7 @@
 
 /**
  * *hemo_exec_line - a function that execute the line
- * @line : a string
+ * @line : a string command
  * @argv : array of arguments
  * Return: On success 1.
  * On error, -1 is returned, and errno is set appropriately.
